@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "../components/ui/card";
@@ -47,7 +48,7 @@ export default function RecipePage() {
         <ThemeToggle />
       </div>
 
-      <h1 className="text-3xl font-bold text-center">Recipe Menu</h1>
+      <h1 className="text-3xl font-semibold text-center">Recipe Menu</h1>
 
       {/* Dropdown */}
       <Select value={category} onValueChange={setCategory}>
@@ -72,10 +73,11 @@ export default function RecipePage() {
 
       {/* Recipes */}
       <div className="grid gap-4">
-        {filteredRecipes?.map((recipe, index) => (
+        {filteredRecipes.length > 0 ? filteredRecipes?.map((recipe, index) => (
           <Card key={index} className="transition hover:shadow-lg">
             <CardHeader>
-              <CardTitle>{recipe.name}</CardTitle>
+              {recipe.name.trim() && <CardTitle>{recipe.name}</CardTitle>}
+              {recipe?.prepTime?.trim() && <CardDescription>Prep. Time : {recipe.prepTime}</CardDescription>}
             </CardHeader>
             <CardContent>
               <strong>Ingredients:</strong>
@@ -86,7 +88,12 @@ export default function RecipePage() {
               </ul>
             </CardContent>
           </Card>
-        ))}
+        )): 
+        // <p className="border-[1px] border-zinc-800 px-4 py-2 text-center rounded-lg bg-zinc-900">No Recipes Found !</p>
+        <Card>
+          <CardContent>No Recipes Found !</CardContent>
+        </Card>
+        }
       </div>
     </div>
   );
