@@ -34,13 +34,13 @@ export default function RecipePage() {
       <div className="flex justify-between items-center">
         <>
           <img
-            className="w-[154px] h-[86px] block dark:hidden mix-blend-multiply"
+            className="w-[124px] h-[66px] block dark:hidden mix-blend-multiply"
             src="/chirag-logo-black-red.png"
             alt="logo"
             />
 
           <img
-            className="w-[154px] h-[86px] hidden dark:block"
+            className="w-[124px] h-[66px] hidden dark:block"
             src="/image.png"
             alt="logo"
           />
