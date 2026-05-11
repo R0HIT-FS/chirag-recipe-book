@@ -48,7 +48,7 @@ export default function RecipePage() {
         <ThemeToggle />
       </div>
 
-      <h1 className="text-3xl font-semibold text-center">Recipe Menu</h1>
+      <h1 className="text-xl md:text-2xl font-semibold text-center">Recipe Menu</h1>
 
       {/* Dropdown */}
       <Select value={category} onValueChange={setCategory}>
