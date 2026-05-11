@@ -545,7 +545,7 @@ export const recipes: Record<string, Recipe[]> = {
       ingredients: [
         "70 gms Ice",
         "20 ml Lemon Syrup",
-        "4-5 Mint Leave",
+        "4-5 Mint Leaves",
         "30 gms Syrup",
         "70 ml Soda",
         "80 ml Sprite",
@@ -557,7 +557,7 @@ export const recipes: Record<string, Recipe[]> = {
       ingredients: [
         "70 gms Ice",
         "20 ml Lemon Syrup",
-        "4-5 Mint Leave",
+        "4-5 Mint Leaves",
         "30 gms Syrup",
         "70 ml Soda",
         "80 ml Sprite",
@@ -569,7 +569,7 @@ export const recipes: Record<string, Recipe[]> = {
       ingredients: [
         "70 gms Ice",
         "20 ml Lemon Syrup",
-        "4-5 Mint Leave",
+        "4-5 Mint Leaves",
         "30 gms Syrup",
         "70 ml Soda",
         "80 ml Sprite",
