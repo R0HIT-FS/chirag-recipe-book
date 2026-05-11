@@ -1,6 +1,3 @@
-
-
-
 "use client";
 
 import { useState, useMemo } from "react";
@@ -27,19 +24,30 @@ export default function RecipePage() {
 
   const filteredRecipes = useMemo(() => {
     return recipes[category]?.filter((recipe) =>
-      recipe.name.toLowerCase().includes(search.toLowerCase())
+      recipe.name.toLowerCase().includes(search.toLowerCase()),
     );
   }, [search, category]);
 
   return (
     <div className="w-full max-w-5xl mx-auto p-6 space-y-6">
-      <div className="flex justify-end">
+      <div className="flex justify-between items-center">
+        <>
+          <img
+            className="w-[154px] h-[86px] block dark:hidden mix-blend-multiply"
+            src="/chirag-logo-black-red.png"
+            alt="logo"
+            />
+
+          <img
+            className="w-[154px] h-[86px] hidden dark:block"
+            src="/image.png"
+            alt="logo"
+          />
+        </>
         <ThemeToggle />
       </div>
 
-      <h1 className="text-3xl font-bold text-center">
-        Recipe Menu
-      </h1>
+      <h1 className="text-3xl font-bold text-center">Recipe Menu</h1>
 
       {/* Dropdown */}
       <Select value={category} onValueChange={setCategory}>
